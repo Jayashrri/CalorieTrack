@@ -1,0 +1,13 @@
+body{
+    background-color: #cceec5;
+}
+
+h1,.Intro{
+    text-align: center;
+}
+
+h1{
+    background-color: rgb(223, 82, 26);
+    color: whitesmoke;
+    padding: 25px 25px 25px 25px;
+}

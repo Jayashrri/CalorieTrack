@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Calorie Consumption Indicator</title>
+        <link rel="stylesheet" href="Style.css">
+    </head>
+    <body>
+       <h1>Calorie Consumption Indicator</h1>
+       <p class="Intro">Minding the amount of calories we consume in a day is an important part of maintaining our health. This tool aims to help you keep track of the amount of calories consumed per day and sends an alert when your consumption exceeds the optimal value.</p>
+       <div id="User">
+            <label for="Name">Name (3 to 12 characters) :</label>
+            <input type="text" class="Name" required minlength="3" maxlength="12">
+            <br>
+       <form id="inpform">
+       </div>
+       <div id="udets">
+            <label for="age">Age :</label>
+            <input type="number" min="0" class="age">
+            <label id="heighthead" for="height">Height :</label>
+            <input type="number" min="0" class="height">
+            <label id="weighthead" for="weight">Weight :</label>
+            <input type="number" min="0" class="weight">
+        </div>
+        <div id="foodname">
+            <label for="Food">Food Item :</label>
+            <input type="text" class="Food" required>
+        </div>
+        <div id="nutrvalue">
+            Nutritional Value (in grams) :<br>
+            <label for="Fats">Fats : </label>
+            <input type="number" class="Fats" required min="0">
+            <label for="Carbs">Carbohydrates: </label>
+            <input type="number" class="Carbs" required min="0">
+            <label for="Proteins">Proteins: </label>
+            <input type="number" class="Proteins" required min="0">
+        </div>
+        <br>
+        <input type="button" class="submitvalue" id="submitvalue" value="Submit">
+        <br>
+        <input type="button" class="logging" value="Login">
+        </form>
+        <br>
+        <br>
+        <p class="disptotal"></p>
+        <p class="cumcalories"></p>
+
+        <script src="CalorieTrack.js" async></script>
+    </body>
+</html>
