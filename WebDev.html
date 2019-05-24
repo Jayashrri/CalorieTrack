@@ -8,11 +8,14 @@
     <body>
        <h1>Calorie Consumption Indicator</h1>
        <p class="Intro">Minding the amount of calories we consume in a day is an important part of maintaining our health. This tool aims to help you keep track of the amount of calories consumed per day and sends an alert when your consumption exceeds the optimal value.</p>
+       <br>
        <div id="User">
             <label for="Name">Name (3 to 12 characters) :</label>
             <input type="text" class="Name" required minlength="3" maxlength="12">
             <br>
+            <input type="button" class="logging" value="Login">
         </div>
+        <br>
        <form id="inpform">
        <div id="udets">
             <label for="age">Age :</label>
@@ -36,11 +39,10 @@
             <input type="number" class="Proteins" required min="0">
         </div>
         <br>
-        <input type="button" class="logging" value="Login">
         <input type="button" id="addfood" value="Add Food Item">
         <input type="button" id="submitvalue" value="Submit">        
-        </form>
         <input type="button" id="showtotalcal" value="Calculate" onclick="showcal()">
+        </form>
         <br>
         <div id="fooddisparea"></div>
 

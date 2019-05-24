@@ -1,13 +1,40 @@
 body{
-    background-color: #cceec5;
+    background-color: gainsboro;
 }
 
 h1,.Intro{
     text-align: center;
+    margin: 5px;
+}
+
+.Intro{
+    padding: 10px;
+    background-color: #8bd8bd;
+    border-color: #243665;
+    border-style: solid;
+    border-width: 5px;
 }
 
 h1{
-    background-color: rgb(223, 82, 26);
+    background-color: #243665;
     color: whitesmoke;
-    padding: 25px 25px 25px 25px;
+    padding: 25px;
+}
+
+form,#User{
+    background-color: #8bd8bd;
+    border-color: #243665;
+    border-style: solid;
+    border-radius: round;
+    border-width: 5px;
+    padding: 10px;
+}
+
+div#fooddisparea > p{
+    border-style: solid;
+    border-radius: 12px;
+    border-color: #243665;
+    border-width: 2px;
+    background-color: #8bd8bd;
+    padding: 15px;
 }

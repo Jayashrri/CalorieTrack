@@ -31,6 +31,7 @@ function calccal(){
     let carbval = Carbs.value;
     let protval = Proteins.value;
     let totalcal = (protval/20*4)+(carbval/35*4)+(fatval/15*9);
+    totalcal=Math.round(totalcal);
     let foodeaten = Food.value+'$'+fatval+'$'+carbval+'$'+protval+'$'+totalcal;
     fooddb[uindex].push(foodeaten);
     let temp = parseInt(calval[uindex]);
@@ -112,6 +113,7 @@ function dispfoods(){
 
 
 function uidlogin(){
+    document.getElementById('inpform').style.display="block";
     logging.style.display="none";
     uindex = users.indexOf(Name.value);
     Name.disabled = true;
@@ -173,6 +175,7 @@ document.getElementById('foodname').style.display="none";
 submitvalue.style.display="none";
 addfood.style.display="none";
 showtotalcal.style.display="none";
+document.getElementById('inpform').style.display="none";
 Name.value="";
 
 if(localStorage.getItem('userids')) setValues();
