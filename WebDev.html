@@ -12,8 +12,8 @@
             <label for="Name">Name (3 to 12 characters) :</label>
             <input type="text" class="Name" required minlength="3" maxlength="12">
             <br>
+        </div>
        <form id="inpform">
-       </div>
        <div id="udets">
             <label for="age">Age :</label>
             <input type="number" min="0" class="age">
@@ -36,14 +36,13 @@
             <input type="number" class="Proteins" required min="0">
         </div>
         <br>
-        <input type="button" class="submitvalue" id="submitvalue" value="Submit">
-        <br>
         <input type="button" class="logging" value="Login">
+        <input type="button" id="addfood" value="Add Food Item">
+        <input type="button" id="submitvalue" value="Submit">        
         </form>
+        <input type="button" id="showtotalcal" value="Calculate" onclick="showcal()">
         <br>
-        <br>
-        <p class="disptotal"></p>
-        <p class="cumcalories"></p>
+        <div id="fooddisparea"></div>
 
         <script src="CalorieTrack.js" async></script>
     </body>
