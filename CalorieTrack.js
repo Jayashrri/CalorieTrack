@@ -171,7 +171,7 @@ function setValues(){
         getval=getval.split(',');
         fooddb.push(getval);
     }
-    dateofentry=localStorage.setItem('dateofentry');
+    dateofentry=localStorage.getItem('dateofentry');
 }
 
 document.getElementById('udets').style.display="none";
