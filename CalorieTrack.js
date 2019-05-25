@@ -25,6 +25,8 @@ let calval = [];
 let reqval = [];
 let uindex;
 let fooddb=[];
+let dateofentry;
+
 
 function calccal(){
     let fatval = Fats.value;
@@ -48,6 +50,7 @@ function showcal(){
         window.alert("Daily Calorie Limit Exceeded!");
     }
 }
+
 
 function dispfoods(){
     fooddisparea.innerHTML="";
@@ -141,7 +144,6 @@ function uidlogin(){
 }
 
 
-
 function populateStorage(){
     getval=users.join(',');
     localStorage.setItem('userids',getval);
@@ -153,7 +155,9 @@ function populateStorage(){
         getval=fooddb[i].join(',');
         localStorage.setItem('fooddb'+i,getval);
     }
+    localStorage.setItem('dateofentry',dateofentry);
 }
+
 
 function setValues(){
     getval=localStorage.getItem('userids');
@@ -167,6 +171,7 @@ function setValues(){
         getval=getval.split(',');
         fooddb.push(getval);
     }
+    dateofentry=localStorage.setItem('dateofentry');
 }
 
 document.getElementById('udets').style.display="none";
@@ -179,5 +184,14 @@ document.getElementById('inpform').style.display="none";
 Name.value="";
 
 if(localStorage.getItem('userids')) setValues();
+
+let today = new Date();
+currentdate=today.getDate+'/'+(today.getMonth+1)+'/'+today.getFullYear;
+
+if(currentdate!=dateofentry){
+    calval.fill(0);
+    fooddb.fill([]);
+    dateofentry=currentdate;
+}
 
 logging.onclick=uidlogin;
